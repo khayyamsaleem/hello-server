@@ -4,8 +4,8 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
 
-const char* ssid = "******";
-const char* pswd = "******";
+const char* ssid = "HOME-CEBE-2.4";
+const char* pswd = "AN3TM7D7HWYLH9HH";
 int attempts = 0;
 
 ESP8266WebServer server(80);
@@ -13,7 +13,7 @@ ESP8266WebServer server(80);
 const int led = LED_BUILTIN;
 
 void handleRoot() {
-  digitalWrite(led, LOW);
+  // digitalWrite(led, LOW);
   server.send(200, "text/html", 
     "<h1>Hello from esp8266!</h1>"
     "<a href='on'>"
@@ -24,7 +24,7 @@ void handleRoot() {
     "</a>"
     );
   delay(200);
-  digitalWrite(led, HIGH);
+  // digitalWrite(led, HIGH);
 }
 
 void turnOn(){
